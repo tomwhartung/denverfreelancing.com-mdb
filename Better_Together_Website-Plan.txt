@@ -1,0 +1,54 @@
+
+Tom, this all sounds great. I'm not worried about a commit history but I
+would just like you to upload changes to a branch that isn't master, use
+whatever name makes sense.
+
+I will select pictures, you can use placeholders for now. Just let me know
+when you've pushed something I can look at.
+
+Those three files are correct, note that resources.html is using vue.js to
+render the HTML, it should be pretty straightforward but let me know if you
+run into any issues. You can reach me on slack with any questions.
+
+Thanks for taking this on!
+
+On Thu, Jan 31, 2019 at 1:00 AM Tom Hartung <tomwhartung@gmail.com> wrote:
+
+> I see three files, index.html, resources.html, and vision.html.
+>
+> And I'm thinking it would be easiest to pull the current source then copy
+> and paste the content into the template demo code.  So I don't really need
+> a branch, unless you really want to see all that history.
+>
+> My github id is tomwhartung.  I have been making a lot of contributions
+> since learning about these Material Design libraries last summer!  MDB in
+> particular is really fun, the others just don't compare....
+>
+> I'm not comfortable picking an image with people I don't know in it, so
+> will use one of the images without people on the home page.  If you want a
+> different image, it will be easy enough to change.  You may want to play
+> around with seeing how the image gets cropped before settling on one.
+>
+> I'm thinking:
+>
+>    - Use the full-page-image template for the home page,
+>    https://mdbootstrap.com/previews/free-templates/full-page-image/ ,
+>    keeping the content pretty much the same, but putting everything from
+>    Events on down in cards under the fold
+>    - Use the one-column-listing template for the vision page,
+>    https://mdbootstrap.com/previews/free-templates/one-column-listing/ ,
+>    it should be possible to keep it essentially the same, image at the top, no
+>    call to action, just the image, paste the title into the "What is MDB"
+>    heading and the content into the single column under that (and deleting
+>    those cards)
+>    - Use the three-columns-listing template for the resources page,
+>    https://mdbootstrap.com/previews/free-templates/three-columns-listing/
+>    , removing the image and call-to-action at the top of the template and
+>    pasting the content into appropriately-sized cards
+>
+> I haven't worked with these templates, and haven't yet looked at the code,
+> but the above would be where I'd start.
+>
+> Does that sound reasonable?
+>
+> Thanks Drew!
