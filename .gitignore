@@ -1,7 +1,6 @@
 #
 # Documentation is here: http://git-scm.com/docs/gitignore
 #
-downloads/
 tmp/
 unpack/
 unzip/
