@@ -4,6 +4,18 @@
 Add Material Design Bootstrap styles to Drew Hornbein's denverfreelancing,com site
 
 
+# Release Notes
+
+Things to tell Drew when I am close to finishing and ready to deliver the new pages.
+
+- Navigation
+  - Links in site menu may need minor updating
+    - Using relative file system linking for now, because I'm working with static files (no server)
+    - Will probably want to remove the '.' from the './' in the menu href attrs when site goes live with a server
+  - Links to external sites menu may need minor updating
+    - Had only links to events, not to groups
+    - Will need to update for new events, or to a group, as appropriate
+
 # References
 
 - Current site
