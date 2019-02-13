@@ -8,6 +8,11 @@ Add Material Design Bootstrap styles to Drew Hornbein's denverfreelancing,com si
 
 Things to tell Drew when I am close to finishing and ready to deliver the new pages.
 
+- General
+  - I changed "Denver Area Freelancing" to "Front Range Freelancing" in a couple of the titles
+  - "Front Range Freelancing" is alliterative and a little bit shorter
+  - I sense you want to be more inclusive than exclusive
+  - Favicon: took a screenshot of the font awesome globe icon and reduced it to 32x32
 - Navigation
   - Links in site menu may need minor updating
     - Using relative file system linking for now, because I'm working with static files (no server)
@@ -15,6 +20,17 @@ Things to tell Drew when I am close to finishing and ready to deliver the new pa
   - Links to external sites menu may need minor updating
     - Had only links to events, not to groups
     - Will need to update for new events, or to a group, as appropriate
+- Home Page
+  - Moving email list signup form to a separate page
+- Vision Page
+  - There are ways to lighten or darken the image, to make the text more readable, if you want
+- Resources Page
+  - If those are affiliate links, you should have disclosures
+    - A short one near the top of the page with the links
+    - One full page with details
+    - I can help with this
+- Footer
+  - Added copyright, link to your medium page, and link to my LLC, hope that's ok
 
 # References
 
@@ -23,6 +39,8 @@ Things to tell Drew when I am close to finishing and ready to deliver the new pa
   - github: https://github.com/dhornbein/denverfreelancing.com/
 - MDB
   - https://mdbootstrap.com/
+- URL for group photos
+  - https://drive.google.com/drive/folders/1c907O0EON8ZX5ywbNuK1jvKsT5MB_KW4
 
 
 # Plan
