@@ -151,7 +151,7 @@
                            type="submit" value="Subscribe" name="subscribe">
                    </div>
 
-                   <div class="row justify-content-around">
+                   <div class="row justify-content-around p-2">
                     <div class="col-md-6">
                      <p class="mt-2">
                       <strong>About you</strong>
@@ -170,60 +170,51 @@
                      </div>
 
                      <div class="mc-field-group mt-2">
-                      <label class="mt-2" for="mce-BIRTHDAY-month">Birthday</label>
+                      <label class="mt-2" for="mce-BIRTHDAY-month">
+                       Birthday
+                      </label>
                       <div class="datefield">
-                       <span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="3" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> /
-                       <span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="3" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span>
+                       <span class="subfield monthfield">
+                        <input class="birthday" id="mce-BIRTHDAY-month" type="text" pattern="[0-9]*" value=""
+                               placeholder="MM" size="3" maxlength="2" name="BIRTHDAY[month]">
+                       </span> /
+                       <span class="subfield dayfield">
+                        <input class="birthday" id="mce-BIRTHDAY-day" type="text" pattern="[0-9]*" value=""
+                               placeholder="DD" size="3" maxlength="2" name="BIRTHDAY[day]">
+                       </span>
                        <span class="small-meta nowrap">( mm / dd )</span>
                       </div>
                      </div>
                     </div><!-- .col-* -->
                     <div class="col-md-6">
-                     <div class="mc-field-group input-group grid-half">
+                     <p class="mt-2">
                       <strong>What are you interested in?</strong>
-                      <ul>
-                       <li><input type="checkbox" value="1" name="group[895][1]" id="mce-group[895]-895-0"><label for="mce-group[895]-895-0">Shared Gigs</label></li>
-                       <li><input type="checkbox" value="2" name="group[895][2]" id="mce-group[895]-895-1"><label for="mce-group[895]-895-1">Shared resources &amp; equipment</label></li>
-                       <li><input type="checkbox" value="4" name="group[895][4]" id="mce-group[895]-895-2"><label for="mce-group[895]-895-2">Community Building</label></li>
-                       <li><input type="checkbox" value="8" name="group[895][8]" id="mce-group[895]-895-3"><label for="mce-group[895]-895-3">Freelancer Policy</label></li>
-                      </ul>
+                     </p>
+                     <div class="mc-field-group input-group">
+                      <div class="custom-control custom-checkbox">
+                       <ul class="list-group text-left">
+                        <li class="list-group-item">
+                         <input type="checkbox" value="1" name="group[895][1]" id="mce-group[895]-895-0">
+                         <label for="mce-group[895]-895-0">Shared Gigs</label>
+                        </li>
+                        <li class="list-group-item">
+                         <input type="checkbox" value="2" name="group[895][2]" id="mce-group[895]-895-1">
+                         <label for="mce-group[895]-895-1">Shared resources &amp; equipment</label>
+                        </li>
+                        <li class="list-group-item">
+                         <input type="checkbox" value="4" name="group[895][4]" id="mce-group[895]-895-2">
+                         <label for="mce-group[895]-895-2">Community Building</label>
+                        </li>
+                        <li class="list-group-item">
+                         <input type="checkbox" value="8" name="group[895][8]" id="mce-group[895]-895-3">
+                         <label for="mce-group[895]-895-3">Freelancer Policy</label>
+                        </li>
+                       </ul>
+                      </div>
                      </div><!-- .mc-field-group -->
                     </div><!-- .col-* -->
                    </div><!-- .row -->
 
-                   <div class="mc-field-group grid-half">
-                    <label for="mce-FNAME">First Name </label>
-                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-                   </div>
-
-                   <div class="mc-field-group grid-half">
-                    <label for="mce-LNAME">Last Name </label>
-                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-                   </div>
-
-                   <div class="mc-field-group size1of2 grid-half">
-                    <label for="mce-PHONE">Phone Number </label>
-                    <input type="text" name="PHONE" class="" value="" id="mce-PHONE">
-                   </div>
-
-                   <div class="mc-field-group size1of2 grid-half">
-                    <label for="mce-BIRTHDAY-month">Birthday </label>
-                    <div class="datefield">
-                     <span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="3" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> /
-                     <span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="3" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span>
-                     <span class="small-meta nowrap">( mm / dd )</span>
-                    </div>
-                   </div>
-
-                   <div class="mc-field-group input-group grid-half">
-                    <strong>What are you interested in? </strong>
-                    <ul>
-                     <li><input type="checkbox" value="1" name="group[895][1]" id="mce-group[895]-895-0"><label for="mce-group[895]-895-0">Shared Gigs</label></li>
-                     <li><input type="checkbox" value="2" name="group[895][2]" id="mce-group[895]-895-1"><label for="mce-group[895]-895-1">Shared resources &amp; equipment</label></li>
-                     <li><input type="checkbox" value="4" name="group[895][4]" id="mce-group[895]-895-2"><label for="mce-group[895]-895-2">Community Building</label></li>
-                     <li><input type="checkbox" value="8" name="group[895][8]" id="mce-group[895]-895-3"><label for="mce-group[895]-895-3">Freelancer Policy</label></li>
-                    </ul>
-                   </div><!-- .mc-field-group -->
                    <div class="mc-field-group input-group grid-half">
                     <strong>What kind of freelance work do you do? </strong>
                     <ul>
