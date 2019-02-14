@@ -152,6 +152,108 @@
         </div><!-- .row -->
       </section>
       <hr class="my-5">
+
+      <h1>Resources</h1>
+      <p>
+        Check out these books, websites, promo codes, and tools recomended by other freelancers.
+      </p>
+      <p class="hug note">
+        * Some of the websites and books use affiliate links to help raise money, you can support this project by clicking the links! Also, content on this page is publically editable, if you see something amiss please <a href="mailto:hello@denverfreelancing.com">email us</a>
+      </p>
+      <div id="main">
+        <div class="resources">
+          <h2 id="books">📖 Books</h2>
+          <div class="books" v-if="books">
+            <div class="book"
+                 :href="book.link"
+                 v-for="book in books">
+              <a :href="book.link" class="cover">
+                <img :src="book.cover" :alt="book.title" v-if="book.cover">
+              </a>
+              <p>
+                <strong>{{ book.title }}</strong>
+              </p>
+              <p class="desc">
+                {{ book.description }}
+                <br>
+                <a :href="book.link" v-if="book.link">Buy on Amazon</a>
+              </p>
+            </div>
+          </div>
+          <p v-else>Loadings...</p>
+
+          <div class="callout">
+            <p>
+              <strong>Got more resources?</strong>
+              Resources on this page come from a public Google Spreadsheet, feel free to add or edit!
+            </p>
+            <p>
+              <a :href="workbookEditURL" class="button">View Spreadsheet</a>
+            </p>
+          </div>
+
+          <h2 id="websites">💻 Websites</h2>
+          <ul class="websites" v-if="websites">
+            <li class="site"
+                v-for="website in websites"
+                v-bind:style="{ listStyleImage: 'url(' + website.icon + ')' }">
+              <p>
+                <a :href="website.link" target="_blank">{{ prettyLink( website.link ) }}</a>
+                <br>
+                {{ website.description }}
+                <br>
+                <small v-if="website.referralLink">[<a :href="website.referralLink">Referral Link</a>]</small>
+              </p>
+            </li>
+          </ul>
+          <p v-else>Loadings...</p>
+
+          <h2 id="promos">💸 Promo Codes</h2>
+          <ul class="promos" v-if="promos">
+            <li class="promo" v-for="promo in promos">
+              <h3 class="title">
+                <a :href="promo.link" target="_blank">{{ promo.name }}</a>
+              </h3>
+              <p class="promocode">
+                <input type="text" readonly onclick="select()" :value="promo.code">
+              </p>
+              <p>
+                {{ promo.description }}
+              </p>
+            </li>
+          </ul>
+          <p v-else>Loadings...</p>
+
+          <h2 id="tools">🛠 Tools</h2>
+          <p class="filter">
+            <label for="filter">Filter Tools</label>
+            <input type="text" name="filter" value="" v-model="search">
+          </p>
+          <ul class="tools" v-if="tools">
+            <li class="site"
+                v-for="tool in tools"
+                v-bind:style="{ listStyleImage: 'url(' + tool.icon + ')' }"
+                v-if="tool.link"
+                v-show="tool.filtered()">
+              <p>
+                <a :href="tool.link" target="_blank"><strong>{{ tool.name }}</strong></a>
+                –
+                {{ tool.description }}
+                <br>
+                <small v-if="tool.referralLink">[<a :href="tool.referralLink">
+                  <template v-if="tool.referralText">{{ tool.referralText }}</template>
+                  <template v-else>Referral Link</template>
+                </a>]</small>
+              </p>
+              <div class="tags" v-if="tool.tags">
+                <span class="tag" v-for="tag in tool.tags">{{ tag }}</span>
+              </div>
+            </li>
+          </ul>
+          <p v-else>Loadings...</p>
+
+        </div>
+      </div>
     </div>
   </main>
 
