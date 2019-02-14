@@ -9,26 +9,24 @@ Add Material Design Bootstrap styles to Drew Hornbein's denverfreelancing,com si
 Things to tell Drew when I am close to finishing and ready to deliver the new pages.
 
 - General
-  - I changed "Denver Area Freelancing" to "Front Range Freelancing" in a couple of the titles
+  - I considered using "Front Range Freelancing" instead of "Denver Area Freelancing" in the "logo" in the header
   - "Front Range Freelancing" is alliterative and a little bit shorter
-  - I sense you want to be more inclusive than exclusive
-  - Favicon: took a screenshot of the font awesome globe icon and reduced it to 32x32
+  - Also, I sense you want to be more inclusive than exclusive
+  - Just a thought...
+- Favicon: took a screenshot of the font awesome globe icon and reduced it to 32x32
 - Navigation
-  - Links in site menu may need minor updating
-    - Using relative file system linking for now, because I'm working with static files (no server)
-    - Will probably want to remove the '.' from the './' in the menu href attrs when site goes live with a server
-  - Links to external sites menu may need minor updating
+  - The logo "Denver Area Freelancers" and Home menu options are redundant
+  - Moved email subscription signup form to its own page
+    - Added an option for it to the main menu
+  - Links to meetup and facebook on the right side of the menu may need minor updating
     - Had only links to events, not to groups
-    - Will need to update for new events, or to a group, as appropriate
+    - Note: Will need to update for new events, or to a group, as appropriate
 - Home Page
-  - Moving email list signup form to a separate page
+  - Moved email list signup form to a separate page
 - Vision Page
-  - There are ways to lighten or darken the image, to make the text more readable, if you want
+  - There are ways to lighten or darken the image, and adjust the text accordingly to make the text more readable
 - Resources Page
-  - If those are affiliate links, you should have disclosures
-    - A short one near the top of the page with the links
-    - One full page with details
-    - I can help with this
+  - If you want an affiliate link disclosure, a full page with details, I can adjust the one I wrote for this site
 - Footer
   - Added copyright, link to your medium page, and link to my LLC, hope that's ok
 
@@ -41,6 +39,10 @@ Things to tell Drew when I am close to finishing and ready to deliver the new pa
   - https://mdbootstrap.com/
 - URL for group photos
   - https://drive.google.com/drive/folders/1c907O0EON8ZX5ywbNuK1jvKsT5MB_KW4
+- Coding standards site: http://codeguide.co/
+  - MDB recommends following it, and I did when I needed to make a choice
+  - For example, added "IE compatibility mode" to each page:
+    - `<meta http-equiv="X-UA-Compatible" content="IE=Edge">`
 
 
 # Plan
