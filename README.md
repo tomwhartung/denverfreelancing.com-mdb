@@ -27,6 +27,22 @@ Things to tell Drew when I am close to finishing and ready to deliver the new pa
   - There are ways to lighten or darken the image, and adjust the text accordingly to make the text more readable
 - Resources Page
   - If you want an affiliate link disclosure, a full page with details, I can adjust the one I wrote for this site
+  - Initial try to get the Vue code to work did not work as I was hoping it would
+  - Downloaded MDB for Vue and trying that
+    - https://mdbootstrap.com/docs/vue/getting-started/download/
+  - Notes:
+    - Downloaded file is "Based on the latest Bootstrap 4 and Vue 2.5.21"
+    - Downloaded file does not include Vue.js
+    - Downloaded file contains demo stuff we can probably delete
+    - CDN link currently in resources.html doesn't specify a version and accesses Vue v2.6.6
+  - Steps taken:
+    - Downloaded file and saved as `downloaded/MDB-Vue-Free-5.1.0.zip` for possible future reference
+    - Unpacked into `Site/resources-vue` and checked in as-is
+    - Added current copy of `Site/resources.html` into that directory
+    - Testing `Site/resources-vue/resources.html` and seeing if we can get that to work
+  - Results:
+    - Initially got several errors, but was able to fix them by linking several directories into `resources-vue/`
+    - Despite this, `Site/resources-vue/resources.html` looks about the same as `Site/resources.html`
 - Footer
   - Added copyright, link to your medium page, and link to my LLC, hope that's ok
 
