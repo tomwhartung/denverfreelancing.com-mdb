@@ -98,200 +98,135 @@
   <!--Main layout-->
   <main class="mt-5 pt-5">
     <div class="container mt-5">
-     <section class="card wow fadeIn" id="mailing">
+      <section class="card wow fadeIn" id="mailing">
 
-       <!-- Heading and Introductory Paragraph -->
-       <div class="row justify-content-center wow fadeIn">
-         <div class="col-md-10 col-lg-9 col-xl-8">
-           <div class="card-body text-center">
-             <h1 class="h1 text-center my-4">
-               <strong>
-                 Resources
-               </strong>
-             </h1>
-             <p class="lead text-center m-3">
-               <strong>
-                Check out these books, websites, promo codes, and tools recomended by other freelancers.
-               </strong>
-             </p>
-             <p class="text-left">
-               <em>
-                 * Some of the websites and books use affiliate links to help raise money,
-                  you can support this project by clicking the links!
-                 Also, content on this page is publically editable, if you see
-                  something amiss please
-                  <a href="mailto:hello@denverfreelancing.com">email us</a>.
-               </em>
-             </p>
-           </div><!-- .card-body -->
-         </div><!--.col-->
-       </div><!-- .row -->
+        <!-- Heading and Introductory Paragraph -->
+        <div class="row justify-content-center wow fadeIn">
+          <div class="col-md-10 col-lg-9 col-xl-8">
+            <div class="card-body">
+              <h1 class="h1 text-center my-4">
+                <strong>
+                  Resources
+                </strong>
+              </h1>
+              <p class="lead m-3">
+                <strong>
+                 Check out these books, websites, promo codes, and tools recomended by other freelancers.
+                </strong>
+              </p>
+              <p class="note">
+                <em>
+                  * Some of the websites and books use affiliate links to help raise money,
+                   you can support this project by clicking the links!
+                  Also, content on this page is publically editable, if you see
+                   something amiss please
+                   <a href="mailto:hello@denverfreelancing.com">email us</a>.
+                </em>
+              </p>
+            </div><!-- .card-body -->
+          </div><!--.col-->
+        </div><!-- .row -->
 
-       <!-- Mailchimp Signup Form -->
-       <div class="row justify-content-center wow fadeIn">
-         <div class="col-md-10 col-lg-9 col-xl-8">
-           <div class="card-body text-center">
-           </div><!-- .card-body -->
-         </div><!--.col-->
-       </div><!-- .row -->
-     </section>
-
-
-      <!--Page Title-->
-      <section class="text-center mt-5">
-        <div class="row mb-4 wow fadeIn">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-              <div class="view overlay">
-                <div class="embed-responsive embed-responsive-16by9 rounded-top">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>
+        <!-- Lists of Resources - Populated using JavaScript and Vue -->
+        <div class="row justify-content-center wow fadeIn">
+          <div id="main">
+            <div class="resources">
+              <h2 id="books">📖 Books</h2>
+              <div class="books" v-if="books">
+                <div class="book"
+                     :href="book.link"
+                     v-for="book in books">
+                  <a :href="book.link" class="cover">
+                    <img :src="book.cover" :alt="book.title" v-if="book.cover">
+                  </a>
+                  <p>
+                    <strong>{{ book.title }}</strong>
+                  </p>
+                  <p class="desc">
+                    {{ book.description }}
+                    <br>
+                    <a :href="book.link" v-if="book.link">Buy on Amazon</a>
+                  </p>
                 </div>
               </div>
-              <div class="card-body">
-                <h4 class="card-title">MDB Quick Start</h4>
-                <p class="card-text">
-                  Get started with MDBootstrap, the world's most popular Material Design framework for building
-                    responsive, mobile-first sites.
-                </p>
-                <p class="card-text">
-                  <strong>5 minutes, a few clicks and... done. You will be surprised at how easy it is.</strong>
-                </p>
-              </div>
-            </div><!-- .card -->
-          </div><!-- col-* -->
+              <p v-else>Loadings...</p>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Bootstrap Automation</h4>
-                <p class="card-text">
-                  Learn how to create a smart website which learns your user and reacts properly to his behavior.
+              <div class="callout">
+                <p>
+                  <strong>Got more resources?</strong>
+                  Resources on this page come from a public Google Spreadsheet, feel free to add or edit!
                 </p>
-                <a href="https://mdbootstrap.com/education/tech-marketing/automated-app-introduction/" target="_blank" class="btn btn-primary btn-md">
-                  Start tutorial
-                  <i class="fas fa-play ml-2"></i>
-                </a>
+                <p>
+                  <a :href="workbookEditURL" class="button">View Spreadsheet</a>
+                </p>
               </div>
-            </div><!-- .card -->
-          </div><!-- .col-* -->
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="card-text">
-                </p>
-                <a href="https://mdbootstrap.com/education/tech-marketing/web-push-introduction/" target="_blank" class="btn btn-primary btn-md">
-                    <i class="fas fa-play ml-2"></i>
-                </a>
-              </div>
-            </div><!-- .card-->
-          </div><!-- .col-* -->
+              <h2 id="websites">💻 Websites</h2>
+              <ul class="websites" v-if="websites">
+                <li class="site"
+                    v-for="website in websites"
+                    v-bind:style="{ listStyleImage: 'url(' + website.icon + ')' }">
+                  <p>
+                    <a :href="website.link" target="_blank">{{ prettyLink( website.link ) }}</a>
+                    <br>
+                    {{ website.description }}
+                    <br>
+                    <small v-if="website.referralLink">[<a :href="website.referralLink">Referral Link</a>]</small>
+                  </p>
+                </li>
+              </ul>
+              <p v-else>Loadings...</p>
+
+              <h2 id="promos">💸 Promo Codes</h2>
+              <ul class="promos" v-if="promos">
+                <li class="promo" v-for="promo in promos">
+                  <h3 class="title">
+                    <a :href="promo.link" target="_blank">{{ promo.name }}</a>
+                  </h3>
+                  <p class="promocode">
+                    <input type="text" readonly onclick="select()" :value="promo.code">
+                  </p>
+                  <p>
+                    {{ promo.description }}
+                  </p>
+                </li>
+              </ul>
+              <p v-else>Loadings...</p>
+
+              <h2 id="tools">🛠 Tools</h2>
+              <p class="filter">
+                <label for="filter">Filter Tools</label>
+                <input type="text" name="filter" value="" v-model="search">
+              </p>
+              <ul class="tools" v-if="tools">
+                <li class="site"
+                    v-for="tool in tools"
+                    v-bind:style="{ listStyleImage: 'url(' + tool.icon + ')' }"
+                    v-if="tool.link"
+                    v-show="tool.filtered()">
+                  <p>
+                    <a :href="tool.link" target="_blank"><strong>{{ tool.name }}</strong></a>
+                    –
+                    {{ tool.description }}
+                    <br>
+                    <small v-if="tool.referralLink">[<a :href="tool.referralLink">
+                      <template v-if="tool.referralText">{{ tool.referralText }}</template>
+                      <template v-else>Referral Link</template>
+                    </a>]</small>
+                  </p>
+                  <div class="tags" v-if="tool.tags">
+                    <span class="tag" v-for="tag in tool.tags">{{ tag }}</span>
+                  </div>
+                </li>
+              </ul>
+              <p v-else>Loadings...</p>
+
+            </div><!-- .resources -->
+          </div><!-- #main -->
         </div><!-- .row -->
       </section>
-      <hr class="my-5">
 
-      <h1></h1>
-      <p>
-      </p>
-      <p class="hug note">
-        * Some of the websites and books use affiliate links to help raise money, you can support this project by clicking the links! Also, content on this page is publically editable, if you see something amiss please <a href="mailto:hello@denverfreelancing.com">email us</a>
-      </p>
-      <div id="main">
-        <div class="resources">
-          <h2 id="books">📖 Books</h2>
-          <div class="books" v-if="books">
-            <div class="book"
-                 :href="book.link"
-                 v-for="book in books">
-              <a :href="book.link" class="cover">
-                <img :src="book.cover" :alt="book.title" v-if="book.cover">
-              </a>
-              <p>
-                <strong>{{ book.title }}</strong>
-              </p>
-              <p class="desc">
-                {{ book.description }}
-                <br>
-                <a :href="book.link" v-if="book.link">Buy on Amazon</a>
-              </p>
-            </div>
-          </div>
-          <p v-else>Loadings...</p>
-
-          <div class="callout">
-            <p>
-              <strong>Got more resources?</strong>
-              Resources on this page come from a public Google Spreadsheet, feel free to add or edit!
-            </p>
-            <p>
-              <a :href="workbookEditURL" class="button">View Spreadsheet</a>
-            </p>
-          </div>
-
-          <h2 id="websites">💻 Websites</h2>
-          <ul class="websites" v-if="websites">
-            <li class="site"
-                v-for="website in websites"
-                v-bind:style="{ listStyleImage: 'url(' + website.icon + ')' }">
-              <p>
-                <a :href="website.link" target="_blank">{{ prettyLink( website.link ) }}</a>
-                <br>
-                {{ website.description }}
-                <br>
-                <small v-if="website.referralLink">[<a :href="website.referralLink">Referral Link</a>]</small>
-              </p>
-            </li>
-          </ul>
-          <p v-else>Loadings...</p>
-
-          <h2 id="promos">💸 Promo Codes</h2>
-          <ul class="promos" v-if="promos">
-            <li class="promo" v-for="promo in promos">
-              <h3 class="title">
-                <a :href="promo.link" target="_blank">{{ promo.name }}</a>
-              </h3>
-              <p class="promocode">
-                <input type="text" readonly onclick="select()" :value="promo.code">
-              </p>
-              <p>
-                {{ promo.description }}
-              </p>
-            </li>
-          </ul>
-          <p v-else>Loadings...</p>
-
-          <h2 id="tools">🛠 Tools</h2>
-          <p class="filter">
-            <label for="filter">Filter Tools</label>
-            <input type="text" name="filter" value="" v-model="search">
-          </p>
-          <ul class="tools" v-if="tools">
-            <li class="site"
-                v-for="tool in tools"
-                v-bind:style="{ listStyleImage: 'url(' + tool.icon + ')' }"
-                v-if="tool.link"
-                v-show="tool.filtered()">
-              <p>
-                <a :href="tool.link" target="_blank"><strong>{{ tool.name }}</strong></a>
-                –
-                {{ tool.description }}
-                <br>
-                <small v-if="tool.referralLink">[<a :href="tool.referralLink">
-                  <template v-if="tool.referralText">{{ tool.referralText }}</template>
-                  <template v-else>Referral Link</template>
-                </a>]</small>
-              </p>
-              <div class="tags" v-if="tool.tags">
-                <span class="tag" v-for="tag in tool.tags">{{ tag }}</span>
-              </div>
-            </li>
-          </ul>
-          <p v-else>Loadings...</p>
-
-        </div>
-      </div>
-    </div>
+    </div><!-- .container -->
   </main>
 
   <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
