@@ -131,24 +131,30 @@
         <div class="row justify-content-center wow fadeIn">
           <div id="main">
             <div class="resources">
-              <h2 id="books">📖 Books</h2>
-              <div class="books" v-if="books">
-                <div class="book"
-                     :href="book.link"
-                     v-for="book in books">
-                  <a :href="book.link" class="cover">
-                    <img :src="book.cover" :alt="book.title" v-if="book.cover">
-                  </a>
-                  <p>
-                    <strong>{{ book.title }}</strong>
-                  </p>
-                  <p class="desc">
-                    {{ book.description }}
-                    <br>
-                    <a :href="book.link" v-if="book.link">Buy on Amazon</a>
-                  </p>
-                </div>
-              </div>
+              <h2 class="display-4 text-center font-weight-bold" id="books">📖 Books</h2>
+              <div class="row justify-content-around wow fadeIn">
+                <div class="books" v-if="books">
+                  <div class="book"
+                       :href="book.link"
+                       v-for="book in books">
+                    <div class="col-md-6 col-lg-4">
+                      <div class="card">
+                        <a :href="book.link" class="cover">
+                          <img :src="book.cover" :alt="book.title" v-if="book.cover">
+                        </a>
+                        <p>
+                          <strong>{{ book.title }}</strong>
+                        </p>
+                        <p class="desc">
+                          {{ book.description }}
+                          <br>
+                          <a :href="book.link" v-if="book.link">Buy on Amazon</a>
+                        </p>
+                      </div><!-- .card -->
+                    </div><!-- .col-* -->
+                  </div><!-- .book -->
+                </div><!-- .books -->
+              </div><!-- .row -->
               <p v-else>Loadings...</p>
 
               <div class="callout">
@@ -161,7 +167,7 @@
                 </p>
               </div>
 
-              <h2 id="websites">💻 Websites</h2>
+              <h2 class="display-4 text-center font-weight-bold" id="websites">💻 Websites</h2>
               <ul class="websites" v-if="websites">
                 <li class="site"
                     v-for="website in websites"
@@ -177,7 +183,7 @@
               </ul>
               <p v-else>Loadings...</p>
 
-              <h2 id="promos">💸 Promo Codes</h2>
+              <h2 class="display-4 text-center font-weight-bold" id="promos">💸 Promo Codes</h2>
               <ul class="promos" v-if="promos">
                 <li class="promo" v-for="promo in promos">
                   <h3 class="title">
@@ -193,7 +199,7 @@
               </ul>
               <p v-else>Loadings...</p>
 
-              <h2 id="tools">🛠 Tools</h2>
+              <h2 class="display-4 text-center font-weight-bold" id="tools">🛠 Tools</h2>
               <p class="filter">
                 <label for="filter">Filter Tools</label>
                 <input type="text" name="filter" value="" v-model="search">
