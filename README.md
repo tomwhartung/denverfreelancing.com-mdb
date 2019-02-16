@@ -45,6 +45,24 @@ Things to tell Drew when I am close to finishing and ready to deliver the new pa
     - Despite this, `Site/resources-vue/resources.html` looks about the same as `Site/resources.html`
 - Footer
   - Added copyright, link to your medium page, and link to my LLC, hope that's ok
+- Merging all of this into new branch in the old repo
+  - Added the following new files and directories:
+    - assets/img/better-together-*
+    - css - Added many new files, some of which are empty placeholders
+    - favicon.ico
+    - font
+    - img
+    - js
+    - resources-vue
+    - src/scss-mdb
+    - subscribe.html
+  - Updated the following existing files:
+    - index.html
+    - resources.html
+    - vision.html
+- Bottom line
+  - Looks good to me except for the resources page
+  - Hopefully someone who knows Vue can figure that out quickly and easily?
 
 # References
 
